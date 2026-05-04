@@ -181,3 +181,24 @@ const chartObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 const chart = document.querySelector('.mockup-chart');
 if (chart) chartObserver.observe(chart);
+
+// === THEME TOGGLE ===
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  root.classList.add('light-mode');
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+  root.classList.toggle('light-mode');
+  if (root.classList.contains('light-mode')) {
+    localStorage.setItem('theme', 'light');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    localStorage.setItem('theme', 'dark');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+});

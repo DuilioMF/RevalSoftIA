@@ -10,8 +10,13 @@
   --glass:rgba(255,255,255,0.04);--glass-border:rgba(255,255,255,0.08);
   --radius:16px;--radius-sm:10px;
 }
+:root.light-mode{
+  --bg:#ffffff;--bg2:#f8f9fa;--bg3:#e9ecef;
+  --text:#1a1a1f;--text-dim:#495057;
+  --glass:rgba(0,0,0,0.04);--glass-border:rgba(0,0,0,0.08);
+}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background-color 0.4s ease, color 0.4s ease}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 img{max-width:100%}
@@ -37,6 +42,10 @@ img{max-width:100%}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .nav-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
 
+/* === THEME TOGGLE === */
+.theme-toggle{background:var(--glass);border:1px solid var(--glass-border);color:var(--text);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:1.1rem;margin-left:auto;margin-right:20px}
+.theme-toggle:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+:root.light-mode .theme-toggle:hover{background:rgba(0,0,0,.05)}
 /* === BUTTONS === */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-weight:600;font-size:.95rem;transition:all .3s;cursor:pointer;border:none}
 .btn-primary{background:var(--gradient);color:#fff;box-shadow:0 4px 20px rgba(255,108,78,.3)}
@@ -66,8 +75,9 @@ img{max-width:100%}
 .stat-label{font-size:.8rem;color:var(--text-dim)}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-/* === DASHBOARD MOCKUP === */
+/* === HERO VISUAL === */
 .hero-visual{flex:1;z-index:1;animation:fadeInUp 1s ease .5s both}
+.hero-illustration{max-width:100%;border-radius:var(--radius);box-shadow:0 20px 80px rgba(0,0,0,.3);animation:float 6s ease-in-out infinite;display:block;margin:0 auto}
 .dashboard-mockup{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5),0 0 60px rgba(255,108,78,.1)}
 .mockup-header{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(0,0,0,.3);border-bottom:1px solid var(--glass-border)}
 .mockup-dots{display:flex;gap:6px}

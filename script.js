@@ -133,14 +133,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // === FORM SUBMIT ===
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  btn.innerHTML = '<span>¡Mensaje Enviado!</span> <i class="fas fa-check"></i>';
-  btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-  setTimeout(() => {
-    btn.innerHTML = '<span>Enviar Mensaje</span> <i class="fas fa-paper-plane"></i>';
-    btn.style.background = '';
-    this.reset();
-  }, 3000);
+  const form = this;
+  const btn = form.querySelector('button[type="submit"]');
+  const data = new FormData(form);
+
+  btn.innerHTML = '<span>Enviando...</span> <i class="fas fa-spinner fa-spin"></i>';
+  btn.disabled = true;
+
+  fetch("https://formspree.io/f/hola@revalsoftia.com.ar", { 
+    method: "POST",
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    btn.disabled = false;
+    if (response.ok) {
+      btn.innerHTML = '<span>¡Mensaje Enviado!</span> <i class="fas fa-check"></i>';
+      btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      form.reset();
+      setTimeout(() => {
+        btn.innerHTML = '<span>Enviar Mensaje</span> <i class="fas fa-paper-plane"></i>';
+        btn.style.background = '';
+      }, 3000);
+    } else {
+      btn.innerHTML = '<span>Error al enviar</span> <i class="fas fa-times"></i>';
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      setTimeout(() => {
+        btn.innerHTML = '<span>Enviar Mensaje</span> <i class="fas fa-paper-plane"></i>';
+        btn.style.background = '';
+      }, 3000);
+    }
+  }).catch(error => {
+    btn.disabled = false;
+    btn.innerHTML = '<span>Error de red</span> <i class="fas fa-wifi"></i>';
+    btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+  });
 });
 
 // === WHATSAPP FLOATING BUTTON ===

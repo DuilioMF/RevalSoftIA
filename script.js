@@ -140,7 +140,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   btn.innerHTML = '<span>Enviando...</span> <i class="fas fa-spinner fa-spin"></i>';
   btn.disabled = true;
 
-  fetch("https://formspree.io/f/dmfpersonal@gmail.com", { 
+  fetch("https://formspree.io/dmfpersonal@gmail.com", { 
     method: "POST",
     body: data,
     headers: {

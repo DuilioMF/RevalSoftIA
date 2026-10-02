@@ -1,478 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RevalSoftIA - La evolución inteligente en gestión empresarial. ERP potenciado con Inteligencia Artificial.">
-    <title>RevalSoftIA — Gestión Inteligente con IA</title>
-    <link rel="icon" type="image/jpeg" href="favicon.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Revalsoft IA crea un ecosistema de especialistas inteligentes, coordinados por DoingLio para resolver problemas reales de cada empresa.">
+  <title>Revalsoft IA — Un ecosistema que sabe a quién despertar</title>
+  <link rel="icon" href="favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="maintenance-screen" style="position:fixed;inset:0;z-index:999999;background:
-      radial-gradient(circle at 50% 35%,rgba(255,108,78,.12),transparent 34%),
-      linear-gradient(180deg,#15151a 0%,#0d0d11 100%);
-      color:#f5f3ef;display:flex;align-items:center;justify-content:center;padding:28px;font-family:Montserrat,Arial,sans-serif;">
-      <div style="max-width:760px;text-align:center;">
-        <div style="width:78px;height:78px;margin:0 auto 28px;border-radius:24px;
-          display:flex;align-items:center;justify-content:center;
-          background:linear-gradient(135deg,rgba(255,108,78,.22),rgba(255,108,78,.06));
-          border:1px solid rgba(255,108,78,.35);box-shadow:0 18px 60px rgba(0,0,0,.35);">
-          <i class="fas fa-brain" style="font-size:34px;color:#ff7a59;"></i>
-        </div>
-        <div style="font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#ff8a6a;margin-bottom:18px;">
-          Revalsoft IA
-        </div>
-        <h1 style="font-size:clamp(36px,6vw,68px);line-height:1.02;margin:0 0 22px;font-weight:800;letter-spacing:-.04em;">
-          Revalsoft IA<br>está evolucionando
-        </h1>
-        <p style="max-width:620px;margin:0 auto;color:#aaa6a0;font-size:clamp(16px,2vw,20px);line-height:1.7;">
-          Algo nuevo está despertando. Muy pronto vas a verlo.
-        </p>
-        <div style="width:110px;height:2px;margin:34px auto 0;background:linear-gradient(90deg,transparent,#ff6c4e,transparent);
-          box-shadow:0 0 18px rgba(255,108,78,.45);"></div>
-      </div>
-    </div>
-    <style>body{overflow:hidden!important}</style>
-    <canvas id="particleCanvas"></canvas>
-
-    <!-- NAV -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-icon"><i class="fas fa-brain"></i></span>
-                <span class="logo-text">RevalSoft<span class="logo-highlight">IA</span></span>
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#features">Soluciones</a></li>
-                <li><a href="#ai-power">IA</a></li>
-                <li><a href="#modules">Módulos</a></li>
-                <li><a href="#testimonials">Clientes</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-                <i class="fas fa-moon"></i>
-            </button>
-            <a href="#contact" class="nav-cta">Solicitar Demo</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav shell">
+    <a class="brand" href="#inicio" aria-label="Revalsoft IA, inicio">
+      <span class="brand-mark">R</span><span>Revalsoft <b>IA</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#ecosistema">Ecosistema</a><a href="#especialistas">Especialistas</a><a href="#como-funciona">Cómo funciona</a>
     </nav>
+    <a class="button button-small" href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">Entrar a DoingLio <span>↗</span></a>
+  </header>
 
-    <!-- HERO -->
-    <section id="hero" class="hero">
-        <div class="hero-bg-orbs">
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-            <div class="orb orb-3"></div>
+  <main>
+    <section class="hero shell" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><i></i> Una nueva arquitectura para trabajar con IA</div>
+        <h1>No hace falta una IA que sepa todo.</h1>
+        <p class="hero-line">Hace falta una que sepa <em>a quién despertar.</em></p>
+        <p class="lede">Revalsoft IA es la empresa detrás de <strong>DoingLio</strong>: un ecosistema vivo que entiende tu necesidad y activa al especialista indicado para resolverla.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">Conocer DoingLio <span>→</span></a>
+          <a class="text-link" href="#ecosistema">Descubrir el ecosistema <span>↓</span></a>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-bolt"></i>
-                <span>Potenciado con Inteligencia Artificial</span>
-            </div>
-            <h1 class="hero-title">
-                La <span class="gradient-text">evolución inteligente</span><br>
-                de tu gestión empresarial
-            </h1>
-            <p class="hero-subtitle">
-                RevalSoftIA es el ERP de nueva generación que combina la robustez de RevalSoft 
-                con el poder de la Inteligencia Artificial. Automatizá, predecí y crecé como nunca antes.
-            </p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary"><span>Comenzar Ahora</span><i class="fas fa-arrow-right"></i></a>
-                <a href="#features" class="btn btn-secondary"><i class="fas fa-play-circle"></i><span>Ver Soluciones</span></a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Empresas confían en nosotros</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="99">0</span><span class="stat-suffix">%</span>
-                    <span class="stat-label">Uptime garantizado</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Años de experiencia</span>
-                </div>
-            </div>
-        </div>
-            <img src="hero-illustration.png" alt="Usuario RevalSoftIA" class="hero-illustration">
-        </div>
+        <div class="channels"><span>Disponible en</span><b>Web</b><b>WhatsApp</b><b>Donde trabajás</b></div>
+      </div>
+
+      <div class="orbit" aria-label="Revalsoft IA conecta DoingLio con especialistas">
+        <div class="orbit-ring ring-a"></div><div class="orbit-ring ring-b"></div><div class="orbit-ring ring-c"></div>
+        <div class="pulse pulse-a"></div><div class="pulse pulse-b"></div>
+        <article class="core">
+          <div class="core-glow"></div><span class="core-icon">◉</span><small>ECOSISTEMA CENTRAL</small><strong>DoingLio</strong><p>Entiende. Coordina. Despierta.</p>
+        </article>
+        <article class="world world-one"><span>CR</span><div><small>OPERACIÓN</small><strong>Capitán Rodolfo</strong><p>Datos y decisiones de estaciones</p></div></article>
+        <article class="world world-two"><span>R</span><div><small>SINIESTROS</small><strong>Rubén</strong><p>Gestión especializada</p></div></article>
+        <article class="world world-three"><span>L</span><div><small>COMUNICACIÓN</small><strong>Lola Redes</strong><p>Presencia y conversación digital</p></div></article>
+        <article class="world world-next"><span>+</span><div><small>PRÓXIMO MUNDO</small><strong>El que tu empresa necesite</strong></div></article>
+      </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section features">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-rocket"></i> Soluciones</span>
-                <h2 class="section-title">Todo lo que necesitás para <span class="gradient-text">gestionar tu empresa</span></h2>
-                <p class="section-desc">Herramientas potentes y fáciles de usar que transforman la manera en que operás tu negocio.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon icon-blue"><i class="fas fa-file-invoice-dollar"></i></div>
-                    <h3>Facturación Electrónica</h3>
-                    <p>Emití facturas electrónicas de forma instantánea con integración directa a AFIP. Sin errores, sin demoras.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon icon-purple"><i class="fas fa-boxes-stacked"></i></div>
-                    <h3>Gestión de Inventario</h3>
-                    <p>Control de stock en tiempo real con predicciones de demanda inteligentes. Nunca más te quedes sin mercadería.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon icon-green"><i class="fas fa-truck-fast"></i></div>
-                    <h3>Logística y Distribución</h3>
-                    <p>Optimizá rutas de entrega, gestioná flotas y reducí costos logísticos con algoritmos inteligentes.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon icon-orange"><i class="fas fa-chart-pie"></i></div>
-                    <h3>Analytics Avanzados</h3>
-                    <p>Dashboards interactivos con métricas en tiempo real. Tomá decisiones basadas en datos, no en suposiciones.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon icon-pink"><i class="fas fa-users-gear"></i></div>
-                    <h3>CRM Integrado</h3>
-                    <p>Gestioná clientes, seguí oportunidades y automatizá tu proceso de ventas desde una sola plataforma.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon icon-cyan"><i class="fas fa-shield-halved"></i></div>
-                    <h3>Seguridad Total</h3>
-                    <p>Encriptación de datos, backups automáticos y control de acceso por roles. Tu información siempre protegida.</p>
-                </div>
-            </div>
-        </div>
+    <section class="manifesto" id="ecosistema">
+      <div class="shell manifesto-grid">
+        <div><span class="section-number">01</span><p class="kicker">La idea</p><h2>Una empresa.<br>Un cerebro coordinador.<br><em>Muchos mundos expertos.</em></h2></div>
+        <div class="manifesto-copy"><p>La inteligencia útil no nace de acumular respuestas genéricas. Nace de reconocer el contexto, convocar experiencia específica y devolver resultados verificables.</p><p>Revalsoft IA construye esa arquitectura. DoingLio es el punto de encuentro: escucha, recuerda y conecta cada problema con el especialista que realmente puede resolverlo.</p><div class="principle"><span>“</span><p>Los especialistas no son opciones de un menú. Son mundos independientes que DoingLio sabe despertar.</p></div></div>
+      </div>
     </section>
 
-    <!-- AI SECTION -->
-    <section id="ai-power" class="section ai-section">
-        <div class="container">
-            <div class="ai-grid">
-                <div class="ai-content">
-                    <span class="section-tag"><i class="fas fa-microchip"></i> Inteligencia Artificial</span>
-                    <h2 class="section-title">El poder de la IA <span class="gradient-text">trabajando para vos</span></h2>
-                    <p class="section-desc">RevalSoftIA no es solo un ERP. Es tu asistente inteligente que aprende de tu negocio y te ayuda a crecer.</p>
-                    <div class="ai-features-list">
-                        <div class="ai-feature">
-                            <div class="ai-feature-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-                            <div><h4>Predicción de Demanda</h4><p>Algoritmos de Machine Learning que anticipan qué productos necesitás y cuándo.</p></div>
-                        </div>
-                        <div class="ai-feature">
-                            <div class="ai-feature-icon"><i class="fas fa-comments"></i></div>
-                            <div><h4>Asistente Virtual</h4><p>Consultá datos, generá reportes y operá el sistema con lenguaje natural.</p></div>
-                        </div>
-                        <div class="ai-feature">
-                            <div class="ai-feature-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-                            <div><h4>Detección de Anomalías</h4><p>Identificación automática de patrones inusuales en ventas, stock y finanzas.</p></div>
-                        </div>
-                        <div class="ai-feature">
-                            <div class="ai-feature-icon"><i class="fas fa-gears"></i></div>
-                            <div><h4>Automatización Inteligente</h4><p>Procesos que se optimizan solos. Menos trabajo manual, más resultados.</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ai-visual">
-                    <div class="ai-brain-container">
-                        <div class="ai-ring ring-1"></div>
-                        <div class="ai-ring ring-2"></div>
-                        <div class="ai-ring ring-3"></div>
-                        <div class="ai-core"><i class="fas fa-brain"></i></div>
-                        <div class="ai-node node-1"><i class="fas fa-chart-line"></i></div>
-                        <div class="ai-node node-2"><i class="fas fa-box"></i></div>
-                        <div class="ai-node node-3"><i class="fas fa-dollar-sign"></i></div>
-                        <div class="ai-node node-4"><i class="fas fa-users"></i></div>
-                        <div class="ai-node node-5"><i class="fas fa-truck"></i></div>
-                        <div class="ai-node node-6"><i class="fas fa-cog"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="specialists shell" id="especialistas">
+      <div class="section-head"><div><span class="section-number">02</span><p class="kicker">Mundos activos</p></div><h2>Cada especialista tiene<br><em>su propia inteligencia.</em></h2><p>El ecosistema crece sin perder profundidad: cada mundo conserva su lenguaje, sus herramientas y su forma de trabajar.</p></div>
+      <div class="world-grid">
+        <article class="world-card coral"><div class="world-top"><span>01</span><i>●</i></div><p class="role">Estaciones de servicio</p><h3>Capitán<br>Rodolfo</h3><p>Convierte datos operativos en respuestas claras para decidir, controlar y actuar.</p><div class="tags"><span>SQL</span><span>ERP</span><span>Operación</span></div></article>
+        <article class="world-card cyan"><div class="world-top"><span>02</span><i>●</i></div><p class="role">Gestión especializada</p><h3>Rubén</h3><p>Acompaña procesos complejos con memoria, criterio y seguimiento de cada caso.</p><div class="tags"><span>Casos</span><span>Documentos</span><span>Seguimiento</span></div></article>
+        <article class="world-card violet"><div class="world-top"><span>03</span><i>●</i></div><p class="role">Redes y comunicación</p><h3>Lola<br>Redes</h3><p>Organiza conversaciones, contenido y presencia digital alrededor de una empresa real.</p><div class="tags"><span>Mensajes</span><span>Contenido</span><span>Canales</span></div></article>
+        <article class="world-card future"><div class="world-top"><span>∞</span><i>+</i></div><p class="role">Arquitectura abierta</p><h3>El próximo<br>especialista</h3><p>No hay un límite de tres mundos. El ecosistema evoluciona con cada nueva necesidad.</p><div class="tags"><span>Tu industria</span><span>Tu proceso</span></div></article>
+      </div>
     </section>
 
-    <!-- WHATSAPP BOT ASSISTANT -->
-    <section id="bot-assistant" class="section bot-section">
-        <div class="container">
-            <div class="bot-grid">
-                <div class="bot-phone-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-notch"></div>
-                        <div class="phone-header-wa">
-                            <i class="fas fa-arrow-left"></i>
-                            <div class="wa-contact">
-                                <div class="wa-avatar"><i class="fas fa-robot"></i></div>
-                                <div>
-                                    <span class="wa-name">RevalSoftIA Bot</span>
-                                    <span class="wa-status">en línea</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="phone-chat">
-                            <div class="chat-bubble user">Hola, ¿cuánto vendimos hoy?</div>
-                            <div class="chat-bubble bot">
-                                <strong>📊 Ventas del día</strong><br>
-                                Total: $1.284.500<br>
-                                Facturas: 47<br>
-                                Ticket promedio: $27.330
-                            </div>
-                            <div class="chat-bubble user">¿Y el stock de aceite?</div>
-                            <div class="chat-bubble bot">
-                                <strong>📦 Stock - Aceite</strong><br>
-                                Disponible: 342 unidades<br>
-                                Proyección: 5 días<br>
-                                ⚠️ Recomiendo reponer
-                            </div>
-                            <div class="chat-bubble user">Compras del mes</div>
-                            <div class="chat-bubble bot">
-                                <strong>🛒 Compras - Mayo 2026</strong><br>
-                                Total: $8.450.000<br>
-                                Proveedores: 12<br>
-                                📈 +15% vs mes anterior
-                            </div>
-                        </div>
-                        <div class="phone-input">
-                            <span>Escribí un mensaje...</span>
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-content">
-                    <span class="section-tag"><i class="fab fa-whatsapp"></i> Asistente WhatsApp</span>
-                    <h2 class="section-title">Tu empresa en el <span class="gradient-text">bolsillo</span></h2>
-                    <p class="section-desc">Consultá ventas, compras, stock y estadísticas directamente desde WhatsApp. Sin abrir el sistema, sin esperar reportes.</p>
-                    <div class="bot-features">
-                        <div class="bot-feat">
-                            <div class="bot-feat-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <h4>Ventas en tiempo real</h4>
-                                <p>Preguntale cuánto vendiste hoy, esta semana o este mes. Al instante.</p>
-                            </div>
-                        </div>
-                        <div class="bot-feat">
-                            <div class="bot-feat-icon"><i class="fas fa-cart-shopping"></i></div>
-                            <div>
-                                <h4>Compras y proveedores</h4>
-                                <p>Consultá órdenes de compra, montos y comparativas con meses anteriores.</p>
-                            </div>
-                        </div>
-                        <div class="bot-feat">
-                            <div class="bot-feat-icon"><i class="fas fa-boxes-stacked"></i></div>
-                            <div>
-                                <h4>Stock y alertas</h4>
-                                <p>Revisá niveles de inventario y recibí alertas automáticas de reposición.</p>
-                            </div>
-                        </div>
-                        <div class="bot-feat">
-                            <div class="bot-feat-icon"><i class="fas fa-chart-pie"></i></div>
-                            <div>
-                                <h4>Estadísticas y reportes</h4>
-                                <p>Pedí gráficos, rankings de productos y análisis comparativos al instante.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/5493415310874?text=Hola!%20Quiero%20probar%20el%20asistente%20de%20RevalSoftIA" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>Probalo Ahora: +54 9 3415 31-0874</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <section class="flow" id="como-funciona">
+      <div class="shell">
+        <div class="flow-intro"><span class="section-number">03</span><p class="kicker">Cómo funciona</p><h2>Del problema al especialista,<br><em>sin perder el contexto.</em></h2></div>
+        <ol class="steps">
+          <li><span>01</span><div><small>HABLÁS</small><h3>Contás lo que necesitás</h3><p>Por web o WhatsApp, con tus palabras y sin aprender un sistema nuevo.</p></div></li>
+          <li><span>02</span><div><small>DOINGLIO ENTIENDE</small><h3>Reconoce el contexto</h3><p>Recupera proyecto, historia, decisiones y restricciones antes de actuar.</p></div></li>
+          <li><span>03</span><div><small>EL ECOSISTEMA DESPIERTA</small><h3>Activa al mundo correcto</h3><p>Convoca la especialidad y las herramientas adecuadas para esa tarea.</p></div></li>
+          <li><span>04</span><div><small>RECIBÍS RESULTADO</small><h3>Trabajo real y verificable</h3><p>La respuesta vuelve con evidencia, continuidad y una próxima acción clara.</p></div></li>
+        </ol>
+      </div>
     </section>
 
-    <!-- MODULES -->
-    <section id="modules" class="section modules">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-cubes"></i> Módulos</span>
-                <h2 class="section-title">Un ecosistema <span class="gradient-text">completo y modular</span></h2>
-                <p class="section-desc">Elegí los módulos que necesitás. Escalá a medida que crece tu empresa.</p>
-            </div>
-            <div class="modules-grid">
-                <div class="module-card">
-                    <div class="module-number">01</div>
-                    <h3>Ventas & Facturación</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Factura electrónica AFIP</li>
-                        <li><i class="fas fa-check"></i> Presupuestos y pedidos</li>
-                        <li><i class="fas fa-check"></i> Listas de precios múltiples</li>
-                        <li><i class="fas fa-check"></i> Cuentas corrientes</li>
-                    </ul>
-                </div>
-                <div class="module-card featured">
-                    <div class="module-badge">Más Popular</div>
-                    <div class="module-number">02</div>
-                    <h3>Stock & Logística</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Multi-depósito</li>
-                        <li><i class="fas fa-check"></i> Trazabilidad completa</li>
-                        <li><i class="fas fa-check"></i> Predicción con IA</li>
-                        <li><i class="fas fa-check"></i> Rutas optimizadas</li>
-                    </ul>
-                </div>
-                <div class="module-card">
-                    <div class="module-number">03</div>
-                    <h3>Compras & Proveedores</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Órdenes de compra</li>
-                        <li><i class="fas fa-check"></i> Comparativa de precios</li>
-                        <li><i class="fas fa-check"></i> Evaluación de proveedores</li>
-                        <li><i class="fas fa-check"></i> Importaciones</li>
-                    </ul>
-                </div>
-                <div class="module-card">
-                    <div class="module-number">04</div>
-                    <h3>Contabilidad</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Plan de cuentas flexible</li>
-                        <li><i class="fas fa-check"></i> Conciliación bancaria</li>
-                        <li><i class="fas fa-check"></i> Balance y resultados</li>
-                        <li><i class="fas fa-check"></i> Reportes fiscales</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <section class="cta shell">
+      <div class="cta-orb" aria-hidden="true"></div>
+      <p class="kicker">El ecosistema ya está despertando</p><h2>La próxima conversación puede<br>cambiar cómo trabaja tu empresa.</h2>
+      <p>Entrá a DoingLio y descubrí qué especialista necesita tu desafío.</p>
+      <a class="button button-light" href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">Abrir DoingLio <span>↗</span></a>
     </section>
+  </main>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-star"></i> Clientes</span>
-                <h2 class="section-title">Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"RevalSoftIA transformó nuestra operación. La predicción de demanda con IA nos ahorró un 30% en costos de inventario."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SS</div>
-                        <div><strong>SuperSargento</strong><span>Caso de éxito</span></div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"La facturación electrónica integrada con AFIP funciona perfecto. Pasamos de perder horas a facturar en segundos."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">PS</div>
-                        <div><strong>Perla del Sur</strong><span>Caso de éxito</span></div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"El sistema de gestión con IA nos permitió optimizar rutas y reducir tiempos de entrega. Una herramienta indispensable."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">FZ</div>
-                        <div><strong>Distribuidora FZ</strong><span>Caso de éxito</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <div class="cta-content">
-                    <h2>¿Listo para la <span class="gradient-text">evolución</span>?</h2>
-                    <p>Unite a las más de 500 empresas que ya están transformando su gestión con RevalSoftIA.</p>
-                    <div class="cta-actions">
-                        <a href="#contact" class="btn btn-primary btn-lg"><span>Solicitar Demo Gratis</span><i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="cta-decoration"><div class="cta-orb"></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-tag"><i class="fas fa-envelope"></i> Contacto</span>
-                    <h2 class="section-title">Hablemos sobre <span class="gradient-text">tu proyecto</span></h2>
-                    <p>Contanos sobre tu empresa y te mostramos cómo RevalSoftIA puede ayudarte a crecer.</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon"><i class="fas fa-phone"></i></div>
-                            <div><strong>Teléfono</strong><span>+54 9 3413 63-1049</span></div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
-                            <div><strong>Email</strong><span>hola@revalsoftia.com.ar</span></div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div><strong>WhatsApp</strong><span>+54 9 3413 63-1049</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form action="https://formspree.io/f/mwvyqgoy" method="POST" id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nombre completo</label>
-                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Empresa</label>
-                            <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block"><span>Enviar Mensaje</span><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="nav-logo">
-                        <span class="logo-icon"><i class="fas fa-brain"></i></span>
-                        <span class="logo-text">RevalSoft<span class="logo-highlight">IA</span></span>
-                    </a>
-                    <p>La evolución inteligente de tu gestión empresarial. ERP potenciado con Inteligencia Artificial.</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/company/revalsoftia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/revalsoftia/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Producto</h4>
-                    <a href="#features">Soluciones</a>
-                    <a href="#modules">Módulos</a>
-                    <a href="#ai-power">Inteligencia Artificial</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Empresa</h4>
-                    <a href="#testimonials">Clientes</a>
-                    <a href="#contact">Contacto</a>
-                    <a href="https://revalsoft.com.ar" target="_blank">RevalSoft Clásico</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 RevalSoftIA. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer class="footer shell"><a class="brand" href="#inicio"><span class="brand-mark">R</span><span>Revalsoft <b>IA</b></span></a><p>Tecnología que entiende a quién despertar.</p><div><a href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">DoingLio</a><span>© <b id="year"></b> Revalsoft IA</span></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>

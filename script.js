@@ -13,3 +13,18 @@ const reveal = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.world-card, .steps li, .manifesto-copy').forEach((node) => reveal.observe(node));
+
+const themeToggle = document.getElementById('theme-toggle');
+const applyTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+    themeToggle.setAttribute('aria-label', theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+  }
+};
+applyTheme(document.documentElement.dataset.theme || 'dark');
+themeToggle?.addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+  applyTheme(next);
+  try { localStorage.setItem('revalsoftia-theme', next); } catch (_) {}
+});

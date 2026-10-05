@@ -9,6 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('revalsoftia-theme');
+        const preferred = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = preferred;
+      } catch (_) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +31,13 @@
     <nav class="nav-links" aria-label="Navegación principal">
       <a href="#ecosistema">Ecosistema</a><a href="#especialistas">Especialistas</a><a href="#como-funciona">Cómo funciona</a>
     </nav>
-    <a class="button button-small" href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">Entrar a DoingLio <span>↗</span></a>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+        <span class="theme-sun" aria-hidden="true">☀</span>
+        <span class="theme-moon" aria-hidden="true">☾</span>
+      </button>
+      <a class="button button-small" href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">Entrar a DoingLio <span>↗</span></a>
+    </div>
   </header>
 
   <main>
@@ -44,10 +61,31 @@
           <div class="core-glow"></div><span class="core-icon">◉</span><small>ECOSISTEMA CENTRAL</small><strong>DoingLio</strong><p>Entiende. Coordina. Despierta.</p>
         </article>
         <article class="world world-one"><span>CR</span><div><small>OPERACIÓN</small><strong>Capitán Rodolfo</strong><p>Datos y decisiones de estaciones</p></div></article>
-        <article class="world world-two"><span>R</span><div><small>SINIESTROS</small><strong>Rubén</strong><p>Gestión especializada</p></div></article>
+        <article class="world world-two"><span>R</span><div><small>SINIESTROS</small><strong>Ruben</strong><p>Gestión especializada</p></div></article>
         <article class="world world-three"><span>L</span><div><small>COMUNICACIÓN</small><strong>Lola Redes</strong><p>Presencia y conversación digital</p></div></article>
         <article class="world world-next"><span>+</span><div><small>PRÓXIMO MUNDO</small><strong>El que tu empresa necesite</strong></div></article>
       </div>
+    </section>
+
+    <section class="contact-strip shell" aria-label="Canales de contacto">
+      <article class="contact-card contact-doinglio">
+        <small>CANAL INTELIGENTE</small>
+        <h2>Hablá con DoingLio</h2>
+        <p>Conversá por la web y dejá que DoingLio te conecte con el especialista indicado.</p>
+        <a href="https://doinglio.revalsoftia.com.ar" target="_blank" rel="noreferrer">Abrir chat <span>↗</span></a>
+      </article>
+      <article class="contact-card contact-whatsapp">
+        <small>WHATSAPP DOINGLIO</small>
+        <h2>+54 9 341 373-0200</h2>
+        <p>El canal operativo de DoingLio para conversar y derivar cada necesidad.</p>
+        <a href="https://wa.me/5493413730200" target="_blank" rel="noreferrer">Abrir WhatsApp <span>↗</span></a>
+      </article>
+      <article class="contact-card contact-revalsoft">
+        <small>CONTACTO INSTITUCIONAL</small>
+        <h2>Revalsoft IA</h2>
+        <p>Consultas comerciales e institucionales: +54 9 3413 63-1049.</p>
+        <a href="https://wa.me/5493413631049" target="_blank" rel="noreferrer">Contactar a Revalsoft IA <span>↗</span></a>
+      </article>
     </section>
 
     <section class="manifesto" id="ecosistema">
@@ -61,7 +99,7 @@
       <div class="section-head"><div><span class="section-number">02</span><p class="kicker">Mundos activos</p></div><h2>Cada especialista tiene<br><em>su propia inteligencia.</em></h2><p>El ecosistema crece sin perder profundidad: cada mundo conserva su lenguaje, sus herramientas y su forma de trabajar.</p></div>
       <div class="world-grid">
         <article class="world-card coral"><div class="world-top"><span>01</span><i>●</i></div><p class="role">Estaciones de servicio</p><h3>Capitán<br>Rodolfo</h3><p>Convierte datos operativos en respuestas claras para decidir, controlar y actuar.</p><div class="tags"><span>SQL</span><span>ERP</span><span>Operación</span></div></article>
-        <article class="world-card cyan"><div class="world-top"><span>02</span><i>●</i></div><p class="role">Gestión especializada</p><h3>Rubén</h3><p>Acompaña procesos complejos con memoria, criterio y seguimiento de cada caso.</p><div class="tags"><span>Casos</span><span>Documentos</span><span>Seguimiento</span></div></article>
+        <article class="world-card cyan"><div class="world-top"><span>02</span><i>●</i></div><p class="role">Gestión especializada</p><h3>Ruben</h3><p>Acompaña procesos complejos con memoria, criterio y seguimiento de cada caso.</p><div class="tags"><span>Casos</span><span>Documentos</span><span>Seguimiento</span></div></article>
         <article class="world-card violet"><div class="world-top"><span>03</span><i>●</i></div><p class="role">Redes y comunicación</p><h3>Lola<br>Redes</h3><p>Organiza conversaciones, contenido y presencia digital alrededor de una empresa real.</p><div class="tags"><span>Mensajes</span><span>Contenido</span><span>Canales</span></div></article>
         <article class="world-card future"><div class="world-top"><span>∞</span><i>+</i></div><p class="role">Arquitectura abierta</p><h3>El próximo<br>especialista</h3><p>No hay un límite de tres mundos. El ecosistema evoluciona con cada nueva necesidad.</p><div class="tags"><span>Tu industria</span><span>Tu proceso</span></div></article>
       </div>
